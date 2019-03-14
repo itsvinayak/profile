@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  color: white;
+
+}
+
+.head_text {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: serif;
+
+
+
+}
+nav{
+  padding-top: 2%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+}
+
+
+nav a{
+  display: inline;
+  padding: 10%;
+  font-size: 3em;
+  text-decoration: none;
+  color: white;
+}
+
+nav::before{
+  content: "----->";
+}
+nav::after{
+  content: "<-----";
+}
+nav a:hover{
+  text-decoration: none;
+  color:green;
+
+}
+
+@media only screen and (max-width: 600px) {
+  nav a{
+     padding:3%;
+    font-size: 2rem;
+  }
+  .contact .title{
+    text-align: center;
+  }
+
+}
+
+.img-style-css {
+       position: relative;
+       top: 25%;
+       left: 25%;
+
+}
+
+.img-style-css:hover{
+  background: green;
+}
+
+.contact{
+  font-family: serif;
+}
+
+
+.contact .title{
+  font-size:3rem;
+}
+
+.contact a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+.contact a:hover{
+  color: green;
+  font-size: 2rem;
+}

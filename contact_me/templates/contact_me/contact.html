@@ -1,0 +1,41 @@
+{% extends "profile_page/index.html" %}
+{% load crispy_forms_tags %}
+
+{% block start %}
+<style>
+
+form{
+  border: 1px solid white;
+  width: 40%;
+  padding: 20px;
+  color:green;
+  background: lightblue;
+  border-radius: 2%;
+  transition: 1s ease;
+}
+form:hover{
+  border: 5px solid red;
+}
+button{
+  padding: 10px;
+  border-radius: 2%;
+  font-family: cursive;
+  width: 100%;
+  border: 0;
+  transition: 2s ease;
+}
+button:hover{
+  background: lightpink;
+}
+</style>
+<center>
+  <form method="POST" style="margin-top: 7rem;">
+      {% csrf_token %}
+
+    {{form|crispy}}
+
+    {{form.error}}
+    <button type="submit" style="color: black">submit</button>
+  </form>
+</center>
+{% endblock %}
