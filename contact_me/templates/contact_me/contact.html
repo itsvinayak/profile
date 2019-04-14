@@ -1,12 +1,15 @@
 {% extends "profile_page/index.html" %}
 {% load crispy_forms_tags %}
-
 {% block start %}
 <style>
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 form{
   border: 1px solid white;
-  width: 40%;
+  width: 90%;
   padding: 20px;
   color:green;
   background: lightblue;
@@ -27,9 +30,20 @@ button{
 button:hover{
   background: lightpink;
 }
+.head_text{
+  display: none;
+}
+
+@media all and (max-width:600px) {
+  .head_text{
+    display: block;
+  }
+
+}
+
 </style>
 <center>
-  <form method="POST" style="margin-top: 7rem;">
+  <form method="POST" style="margin-top: 2rem;">
       {% csrf_token %}
 
     {{form|crispy}}
